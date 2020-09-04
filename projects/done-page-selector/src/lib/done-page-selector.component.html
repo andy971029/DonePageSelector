@@ -1,0 +1,40 @@
+<!-- 頁碼 -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+<div class="my-2 mr-2">
+  <ng-container *ngIf="DataSum > 0">
+    <nav aria-label="Page navigation example d-inline-flex flex-row">
+      <ul class="pagination justify-content-center pagination-sm">
+        <li class="page-item">
+          <a class="page-link" href="javascript:;" aria-label="Previous" (click)="PageChange(1)">
+            <span aria-hidden="true">第一頁</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="javascript:;" aria-label="Previous" (click)="PageChange(CurrentPage-1)">
+            <span aria-hidden="true">&lt;</span>
+          </a>
+        </li>
+        <li class="page-item" *ngFor="let page of pageItems">
+          <a class="page-link" href="javascript:;" (click)="PageChange(page)"
+            [ngClass]="{'pageSelect': page === CurrentPage}">{{page}}</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="javascript:;" aria-label="Next" (click)="PageChange(CurrentPage+1)">
+            <span aria-hidden="true">&gt;</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="javascript:;" aria-label="Next" (click)="PageChange(PageSum)">
+            <span aria-hidden="true">最後一頁</span>
+          </a>
+        </li>
+        &nbsp;
+        <li class="page-itemNoline disabled"><a class="page-link" href="javascript:;">共{{PageSum}}頁</a></li>
+        <li class="page-itemNoline disabled"><a class="page-link" href="javascript:;">({{DataSum}}筆資料)</a></li>
+      </ul>
+    </nav>
+  </ng-container>
+  <ng-container *ngIf="DataSum < 1">
+    <h3 class="text-center my-2" style="color: rgb(92, 92, 92);">--目前尚無資料--</h3>
+  </ng-container>
+</div>
