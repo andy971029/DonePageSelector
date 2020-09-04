@@ -13,7 +13,7 @@ export class DonePageSelectorComponent implements OnInit, OnChanges {
   @Input() PageSize: number;
 
   /** 切換頁數事件 */
-  @Output() PageChanged = new EventEmitter<number>();
+  @Output() OnPageChange = new EventEmitter<number>();
   /** 頁數陣列 */
   pageItems = [];
   /** 總頁數 */
@@ -64,7 +64,7 @@ export class DonePageSelectorComponent implements OnInit, OnChanges {
       return;
 
     }
-    this.PageChanged.emit(page);
+    this.OnPageChange.emit(page);
     this.CurrentPage = page;
     this.SetPageData();
   }

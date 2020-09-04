@@ -2,22 +2,26 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
-## Code scaffolding
+# Using
 
-Run `ng generate component component-name --project done-page-selector` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project done-page-selector`.
-> Note: Don't forget to add `--project done-page-selector` or else it will be added to the default project in your `angular.json` file. 
+First you have to import it 
+```javascript
+import { DonePageSelectorModule } from 'done-page-selector';
+```
 
-## Build
+and then you can use it in your tamplate like below
+```html
+<done-page-selector DataSum="100" PageSize="10"></done-page-selector>
+```
+> Note: this component Dependencies Bootstrap, make sure you install Bootstrap in your project
 
-Run `ng build done-page-selector` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Properties
+*`DataSum` - Count of data
+*`PageSize` - Count of data to show per page
+> Note: Total page = `DataSum` / `PageSize`
 
-## Publishing
-
-After building your library with `ng build done-page-selector`, go to the dist folder `cd dist/done-page-selector` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test done-page-selector` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Event
+*`OnPageChange` - Emit when page has been changed
 
 ## Further help
 
