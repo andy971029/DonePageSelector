@@ -16,12 +16,12 @@ and then you can use it in your tamplate like below
 > Note: this component Dependencies Bootstrap, make sure you install Bootstrap in your project
 
 # Properties
-*`DataSum` - Count of data
-*`PageSize` - Count of data to show per page
+* `DataSum` - Count of data
+* `PageSize` - Count of data to show per page
 > Note: Total page = `DataSum` / `PageSize`
 
 # Event
-*`OnPageChange` - Emit when page has been changed
+* `OnPageChange` - Emit when page has been changed
 
 ## Further help
 
