@@ -3,7 +3,10 @@ import { Component, OnInit, Input, Output, EventEmitter, SimpleChange, OnChanges
 @Component({
   selector: 'done-page-selector',
   templateUrl: './done-page-selector.component.html',
-  styleUrls: ['./done-page-selector.component.css']
+  styleUrls: [
+    './done-page-selector.component.css',
+    '../styles/css/bootstrap.min.css'
+  ]
 })
 export class DonePageSelectorComponent implements OnInit, OnChanges {
   /** 總筆數 */
